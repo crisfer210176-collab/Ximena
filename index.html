@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Para Ximena ❤️</title>
+<style>
+:root{--pink:#ff4f87;--rose:#ffd5e2;--cream:#fff8fb;--ink:#553342}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:linear-gradient(180deg,#fff5f8,#ffe3ec);color:var(--ink);overflow-x:hidden}
+header{padding:70px 20px 48px;text-align:center;background:radial-gradient(circle at top,#fff 0,#ffe3ec 65%,#ffd3e1 100%)}
+.heart{font-size:3rem;animation:pulse 1.5s infinite}
+h1{font-size:clamp(2.2rem,8vw,4.3rem);line-height:1.05;margin:12px auto;color:#c72e68}
+.subtitle{font-size:1.1rem;max-width:650px;margin:18px auto;line-height:1.7}
+main{max-width:900px;margin:auto;padding:24px 18px 70px}
+.card{background:#ffffffd9;border:1px solid #ffd0df;border-radius:24px;padding:25px;margin:20px 0;box-shadow:0 12px 35px #b9446b14}
+h2{text-align:center;color:#c72e68}
+.photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+figure{margin:0;text-align:center}
+figure img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px;background:#ffe7ef;border:2px solid #ffd0df}
+figcaption{padding:10px;font-weight:650}
+.note{font-size:.9rem;color:#805c6b;text-align:center}
+.letter{font-size:1.06rem;line-height:1.9;white-space:pre-line}
+button{display:block;margin:24px auto 8px;border:0;border-radius:999px;padding:16px 25px;font-size:1.05rem;font-weight:750;background:var(--pink);color:white;box-shadow:0 8px 20px #ff4f8740;cursor:pointer}
+button:active{transform:scale(.98)}
+.choices{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.choices button{min-width:135px;margin:12px 0}
+button.yes{background:#e83e78}
+button.no{background:#fff;color:#b83265;border:2px solid #f3a6c1;box-shadow:none}
+#surprise{display:none;text-align:center;font-size:clamp(1.35rem,5vw,2.1rem);font-weight:850;color:#c72e68;line-height:1.5;padding:20px 5px}
+footer{text-align:center;padding:30px;color:#87566a}
+@keyframes pulse{50%{transform:scale(1.12)}}
+</style>
+</head>
+<body>
+<header>
+  <div class="heart">❤️</div>
+  <h1>Para ti, Ximena</h1>
+  <p class="subtitle">Hay personas que llegan a la vida y, sin darse cuenta, la hacen mucho más bonita. Tú eres una de esas personas para mí.</p>
+</header>
+<main>
+  <section class="card">
+    <h2>Unos recuerdos contigo 📸</h2>
+    <div class="photos">
+      <figure><img src="fotos/ustedes.jpg" alt="Un recuerdo especial de ustedes"><figcaption>Un recuerdo especial ❤️</figcaption></figure>
+      <figure><img src="fotos/ximena_pequena_1.jpg" alt="Foto de Ximena"><figcaption>Una sonrisa que alegra el día 🌷</figcaption></figure>
+      <figure><img src="fotos/ximena_pequena_2.jpg" alt="Otra foto de Ximena"><figcaption>Alguien muy especial ✨</figcaption></figure>
+    </div>
+    <p class="note">Para que aparezcan las fotos, coloca tus imágenes en la carpeta <b>fotos</b> usando exactamente esos nombres.</p>
+  </section>
+  <section class="card">
+    <h2>Quería decirte algo… 💌</h2>
+    <div class="letter">Ximena,
+
+No sé si estas palabras alcancen para explicar todo lo que siento, pero quería hacer algo especial para ti y decirte que me importas muchísimo.
+
+Me gusta compartir momentos contigo, conocerte cada día un poquito más y tenerte en mis pensamientos. No quiero presionarte ni apresurar nada; solo quiero ser sincero contigo y decirte lo que hay en mi corazón.
+
+Me haría muy feliz poder construir algo bonito contigo, con cariño, confianza, respeto y muchas sonrisas.
+
+Gracias por ser tú. ❤️
+
+Con cariño,
+Kevin</div>
+    <div class="question">
+      <h2>Ximena, ¿quieres ser mi novia? 🥹❤️</h2>
+      <p class="note">Elige la respuesta que salga de tu corazón. 💗</p>
+      <div class="choices">
+        <button class="yes" onclick="answerYes()">¡Sí, quiero! ❤️</button>
+        <button class="no" onclick="answerNo()">No 💗</button>
+      </div>
+      <div id="surprise" aria-live="polite"></div>
+    </div>
+  </section>
+  <section class="card">
+    <h2>Sin presión, desde el corazón</h2>
+    <p class="subtitle">Sea cual sea tu respuesta, quiero que sepas que respeto lo que sientes. Lo importante para mí es que podamos hablar con sinceridad y cariño.</p>
+  </section>
+</main>
+<footer>Hecho con cariño por Kevin ❤️</footer>
+<script>
+function answerYes(){
+  const box=document.getElementById('surprise');
+  box.textContent='¡Me acabas de hacer el más feliz! ❤️🥹 ¡Quiero construir algo muy bonito contigo, Ximena! 💐';
+  box.style.display='block';
+  box.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function answerNo(){
+  const box=document.getElementById('surprise');
+  box.textContent='Gracias por ser sincera conmigo, Ximena. ❤️ Respeto lo que sientes y deseo que siempre podamos tratarnos con cariño.';
+  box.style.display='block';
+  box.scrollIntoView({behavior:'smooth',block:'center'});
+}
+</script>
+</body>
+</html>
